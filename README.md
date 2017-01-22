@@ -23,8 +23,7 @@ $http.promise()
 /*
 get
 */
-$http.get(url)
-.success(function(response){
+$http.get(url).success(function(response){
     ///todo
     ///...
     console.log('get success:'+response);
@@ -43,8 +42,7 @@ $http.get(url)
 /*
 post
 */
-$http.post(url)
-.then(function(response){
+$http.post(url).then(function(response){
     ///success
     ///todo
     ///...
