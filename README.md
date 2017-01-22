@@ -9,11 +9,13 @@ $http.get(url, data, headers)
 $http.post(url, data, headers)
 $http.put(url, data, headers)
 $http.delele(url, data, headers)
-$http.ajax({/*config*/})
+$http.request({/*config*/})
 $http.promise()
 ```
 `url`  : url string.
+
 `data` *(optional)* : a{key: value} object or url-encoded string.
+
 `headers` *(optional)* :   {key: value} object (e.g. `{"Accept":"application/json"}`).
 
 **Example**:
