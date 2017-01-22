@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=10, user-scalable=none" />
+  <script src="eline.js"></script>
+  <style>
+    body {
+      font-family: "Lato", sans-serif;        
+      margin:0;
+      padding: 0;
+      font-size: 1em;
+      line-height: 1.5em;
+      overflow:hidden; 
+    }
+    nav{
+      position: absolute;
+      top: 0;
+      margin: 0;
+      width: 100vw;
+      color: white;
+      box-shadow: 0px 15px 35px -15px rgba(102, 0, 204, 0.6);
+      background: -webkit-linear-gradient(left top, rgb(102, 102, 255), #a64dff);
+      background: -o-linear-gradient(bottom right, rgb(102, 102, 255), #a64dff);
+      background: -moz-linear-gradient(bottom right, rgb(102, 102, 255), #a64dff);
+      background: linear-gradient(to bottom right, rgb(102, 102, 255), #a64dff);
+      line-height: 2.75em;
+      text-align: center;
+    }
+    .content{
+      top: 5.5em;
+      height: calc(100vh - 5.5em);     
+      position: relative;  
+      text-justify : auto; 
+      text-align:justify;
+      text-align: center; 
+    }
+    nav h1{
+      margin: 0;
+    }
+    /*nav ~ div{
+      height: calc(100vh - 5.5em);
+    }*/
+    .slide-box{
+      width: 500vw;
+      -webkit-transition-property: -webkit-transform;
+      -webkit-transition-duration: 0.5s;
+      -webkit-transition-timing-function: ease;
+      -o-transition-property: -o-transform;
+      -o-transition-duration: 0.5s;
+      -o-transition-timing-function: ease;
+      transition-property: transform;
+      transition-duration: 0.5s;
+      transition-timing-function: ease;
+    }
+    .slide-box div{  
+      width: 92vw;
+      padding:4vw;
+      float: left;
+      position: relative;
+      display: block;  
+      color: #999;
+    }
+    .menu {      
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      max-width: 960px;
+      min-width: 320px;
+      font-size: calc(.75em + .75vw);
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      height: 2.75em;
+      line-height: 2.75em;
+    }
+    .menu a {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .menu .menu-item {
+      width: auto !important;
+      display: inline-block !important;
+      margin: 0 .5em;
+    }
+
+    .menu .menu-item a {
+      padding-bottom: 0.25em;
+      border-bottom: 0.125em solid transparent;
+    }
+
+  </style>
+</head>
+<body>
+  <nav id='nav'>
+    <h1>elastic line</h1>
+    <ul class='menu'>
+      <li class='menu-item' onclick="slide(0);">
+        <a >Home</a>
+      </li>
+      <li class='menu-item' onclick="slide(1);">
+        <a >Photo gallery</a>
+      </li>
+      <li class='menu-item' onclick="slide(2);">
+        <a >About</a>
+      </li>
+      <li class='menu-item' onclick="slide(3);">
+        <a >Blog</a>
+      </li>
+      <li class='menu-item' onclick="slide(4);">
+        <a >Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="content">
+    <div class='slide-box'>
+      <div id="home">
+        <strong>Home</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      </div>
+      <div id="photo">
+        <strong>Photo gallery</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      </div>
+      <div id="about">
+        <strong>About</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      </div>
+      <div id="blog">
+        <strong>Blog</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      </div>
+       <div id="contact">
+        <strong>Contact</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">    
+    var elasticLine = new elasticLine('.menu',{target:'a',height:'3px'});
+    function slide(index){
+      document.querySelector('.slide-box').style.transform="translateX( " + -(index)*100 + "vw )";
+    }
+
+  </script>
+</body>
+</html>

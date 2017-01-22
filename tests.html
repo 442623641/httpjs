@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=10, user-scalable=yes" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+   .success { color: #090; }
+   .failure { color: #900; }
+ </style>
+ <script type="text/javascript" src="promise.js"></script>
+ <script type="text/javascript" src="tests.js"></script>
+ <!-- <script type="text/javascript" src="http.js"></script> -->
+ <!-- <script type="text/javascript" src="http2.js"></script> -->
+ <script type="text/javascript" src="promise4.js"></script>
+ <script type="text/javascript">
+  function success(name){
+    var ul = document.getElementById("console");
+    ul.innerHTML += "<li class='success'>Success: " + name +"</li>"
+    console.log("Success: " + name );
+  }
+  function failure(name){
+    var ul = document.getElementById("console");
+    ul.innerHTML += "<li class=failure>Failure: " + name +"</li>"
+    console.log("Failure: " + name );
+  }
+</script>
+</head>
+
+<body>
+  <div style="display: flex;">
+    <div class="container">
+   <div class="button" onclick="test_simple_synchronous()">
+    <span checked="">simple_synchronous</span></div>
+      <div class="button" onclick="test_simple_asynchronous()">simple_asynchronous</div>
+      <div class="button" onclick="test_multi_results()">multi_results</div>
+      <div class="button" onclick="test_join()">join</div>
+      <div class="button" onclick="test_join_empty()">join_empty</div>
+      <div class="button" onclick="test_then_then()">then_then</div>
+      <div class="button" onclick="test_ajax_timeout()">ajax_timeout</div>
+      <div class="button" onclick="http_post()">post</div>
+      <div class="button" onclick="http2_post()">post2</div>
+      <div class="button">Border (Inner Shadow)</div>
+      <div class="button">Border (Outer Shadow)</div>
+    </div>
+
+    <div style="float: right;width: 40vw;background: #fff">
+     <h3>console out...</h3>
+     <ul id="console"></ul>
+   </div>
+ </div>
+</body>
+</html>
