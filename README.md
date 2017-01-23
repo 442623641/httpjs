@@ -1,8 +1,8 @@
-# http.js
+# $http
 
 A lightweight AJAX request implementation of promises.
 Because AJAX requests are the root of much asynchrony in Javascript.
-\$http  provides the following functions which is similar to the angular $http
+*$http* provides the following functions which is similar to the *angular* `$http`
 
 ```js
 $http.get(url, data, headers)
@@ -14,7 +14,7 @@ $http.promise()
 ```
 `url`  : url string.
 
-`data` *(optional)* : a{key: value} object or url-encoded string.
+`data` *(optional)* : a {key: value} object or url-encoded string.
 
 `headers` *(optional)* :   {key: value} object (e.g. `{"Accept":"application/json"}`).
 
