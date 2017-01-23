@@ -195,41 +195,6 @@
         });
     }
 
-    Promise.all = function(promises) {
-        return new Promise(function(resolve, reject) {
-            var resolvedCounter = 0
-            var promiseNum = promises.length
-            var resolvedValues = new Array(promiseNum);
-             for (var i = 0; i < promiseNum; i++) { 
-                (function(i) {
-                    Promise.resolve(promises[i]).then(function(value) {
-                        resolvedCounter++;
-                        resolvedValues[i] = value;
-                        if (resolvedCounter == promiseNum) {
-                            return resolve(resolvedValues);
-                        }
-                    },
-                    function(reason) {
-                        return reject(reason)
-                    })
-                })(i)
-            }
-        })
-    }
-
-    Promise.race = function(promises) {
-        return new Promise(function(resolve, reject) {
-            for (var i = 0; i < promises.length; i++) {
-                Promise.resolve(promises[i]).then(function(value) {
-                    return resolve(value);
-                },
-                function(reason) {
-                    return reject(reason);
-                });
-            }
-        });
-    }
-
     Promise.resolve = function(value) {
         return new Promise(function(resolve) {
             resolve(value);
