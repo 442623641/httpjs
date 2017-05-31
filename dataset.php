@@ -8,26 +8,30 @@ re($mothed);
 function re($type){
 	if($type=='POST'){
 		if(isset($_POST['type'])){
-			echo 'success '.$type;
+			success($type);
 		}else{
-			header("HTTP/1.1 404 type error");
-			echo 'error'.$type;
+			error($type);
 		}
 	}else if($type=='GET'){
 		if(isset($_GET['type'])){
-			echo 'success '.$type;
+			success($type);
 		}else{
-			header("HTTP/1.1 404 type error");
-			echo 'error'.$type;
+			error($type);
 		}
 	}
 	else if($type=='PUT'){
 		if(isset($_PUT['type'])){
-			echo 'success '.$type;		
+			success($type);		
 		}else{
-			header("HTTP/1.1 404 type error");
-			echo 'error type is '.$type;	
+			error($type);	
 		}
 	}
 	exit();
+}
+success($type){
+	echo 'success '.$type;
+}
+error($type){
+	header("HTTP/1.1 404 type error");
+	echo 'error type is '.$type;	
 }
